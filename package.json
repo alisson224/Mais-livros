@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "linter": "prettier --check .",
-    "linter:fix": "prettier --write ."
+    "linter:fix": "prettier --write .",
+    "test": "jest", 
+    "test:watch": "jest --watch"
   },
   "author": "Alisson",
   "license": "ISC",
@@ -13,6 +15,8 @@
     "express": "^5.1.0"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.4",
     "prettier": "^3.5.3"
   }
 }

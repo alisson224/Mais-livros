@@ -10,7 +10,7 @@ fs.readFile("./arq1.txt", function ( error1, resposta ){
 
   fs.readFile("./arq2.txt", function ( error2, resposta2 ){
     if(error2){  
-      console.log("Erro ao ler o primeiro arquivo")
+      console.log("Erro ao ler o segundo arquivo")
       return
     }
     fs.readFile("./arq3.txt", function ( error3, resposta3 ){
@@ -18,7 +18,7 @@ fs.readFile("./arq1.txt", function ( error1, resposta ){
     
     
       if(error3){  
-    console.log("Erro ao ler o primeiro arquivo")
+    console.log("Erro ao ler o terceiro arquivo")
     return
       }
 

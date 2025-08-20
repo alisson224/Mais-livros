@@ -1,5 +1,5 @@
 
-const fs = require ("node:fs");
+const fs = require("node:fs");
 
 
 fs.readFile("./arq1.txt", function ( error1, resposta ){

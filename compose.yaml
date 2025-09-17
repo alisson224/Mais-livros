@@ -5,18 +5,18 @@ services:
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=1324
-      - POSTGRES_USER=tulio
+      - POSTGRES_PASSWORD=1439
+      - POSTGRES_USER=alisson224
       - POSTGRES_DB=maisleitura
     volumes:
-      - db_data:/var/lib/postgresql/data
-  Pgweb:
+      - db_data_x:/var/lib/postgresql/data
+  pgweb:
     image: sosedoff/pgweb
     ports:
       - 8081:8081
     depends_on:
       - db
-      
+
 volumes:
-  db_data:
+  db_data_x:
     driver: local

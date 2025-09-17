@@ -6,13 +6,16 @@
   "scripts": {
     "linter": "prettier --check .",
     "linter:fix": "prettier --write .",
-    "test": "jest", 
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "service:up": "docker compose up -d",
+    "service:down": "docker compose down"
   },
   "author": "Alisson",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

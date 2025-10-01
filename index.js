@@ -1,4 +1,4 @@
-const { query } = require ("./infra/database");
+const { query } = require("./infra/database");
 
 query("SELECT 1 + 1;")
   .then(function (value) {

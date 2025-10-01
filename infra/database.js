@@ -1,11 +1,19 @@
-const { client } = require("pg");
+const { Client } = require("pg");
 
+async function query(sql, args = []) {
+  const client = new Client({
+    host: "localhost",
+    port: 5432,
+    user: "alisson224",
+    database:"maisleitura",
+    password: "1439",
+  });
+  await client.connect();
 
-function query(sql){
-  const client = new client({
-    host: "",
-    port: ,
-    user: "",
-    password: "",
-  })
+  const res = await client.query(sql, args);
+
+  await client.end();
+  return res.rows;
 }
+
+module.exports = {query}

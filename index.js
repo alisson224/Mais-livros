@@ -1,6 +1,8 @@
+require("dotenv").config();
+console.log(process.env);
 const { query } = require("./infra/database");
 
-console.log(process.env.NAME);
+console.log(process.env);
 
 query("SELECT 1 + 1;")
   .then(function (value) {

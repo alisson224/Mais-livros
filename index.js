@@ -1,13 +1,11 @@
 require("dotenv").config();
-console.log(process.env);
-const { query } = require("./infra/database");
+const livroRepository = require("./infra/repository/livro");
 
-console.log(process.env);
-
-query("SELECT 1 + 1;")
-  .then(function (value) {
-    console.log(value);
-  })
-  .catch(function (err) {
-    console.log("Deu ruim", err);
-  });
+livroRepository
+.consultarTodos()
+.then(function (resultado) {
+  console.log(resultado);
+})
+.catch(function (error) {
+  console.log("Deu ruim", error);
+});

@@ -1,10 +1,11 @@
 const { query } = require("../database");
 
-function consultarTodos() {
+async function consultarTodos() {
   const sql = `SELECT * FROM livro`;
 
   const resultados = await query(sql)
 
   return resultados;
-
 }
+
+module.exports = { consultarTodos };

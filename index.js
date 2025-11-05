@@ -4,6 +4,7 @@ const livroRepository = require("./infra/repository/livro");
 
 const server = http.createServer(function (req, res) {
   //res.writeHead(200, {"content-type": "text/plain"})
+  console.log(req.method, req.url);
   res.end("SP ganha de 2x0 hj do menguinho");
 });
 
